@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giỏ hàng đơn giản</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Giỏ hàng</h2>
+        <p>Chi tiết giỏ hàng</p>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>id sản phẩm</th>
+                <th>Tên sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Giá tiền</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php if ($rows) :?>
+            <?php foreach ($rows as $product) :
+                        ?>
+            <tr>
+                <td><?php echo $product['id'] ?></td>
+                <td><?php echo $product['name'] ?></td>
+                <td><?php echo $product['dia_diem'] ?></td>
+                <td><?php echo $product['so_luong_nguoi']." Người" ?></td>
+
+                <td><?php echo $product['ngay_dat'] ?></td>
+                <td> <a href="<?php echo ADMIN_URL . 'index.php?controller=tour&action=edit&id='.$product['id']; ?>" class="btn btn-warning">SỬA</a>
+                    <a href="<?php echo ADMIN_URL . 'index.php?controller=tour&action=delete&id='.$product['id']; ?>" class="btn btn-danger remove">XÓA</a> </td>
+            </tr>
+
+            <?php endforeach; ?>
+            <?php endif; ?>
+            </tbody>
+        </table>
+        <div>
+            Tổng hóa đơn thành toán<strong>240000</strong>
+        </div>
+    </div>
+
+    <div class="container">
+
+    </div>
+</body>
+</html>

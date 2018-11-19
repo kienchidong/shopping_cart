@@ -1,0 +1,19 @@
+body{
+    background-image: url("../images/bg1.jpg");
+    background-repeat: repeat;
+}
+.hang{
+    box-shadow: 20px 5px 20px 5px #BBBBBB;
+    text-align: center;
+}
+
+.hang input[type='number']{
+    border-radius: 15px;
+
+}
+.hang input[type='submit']{
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 15px;
+}
