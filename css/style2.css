@@ -16,4 +16,16 @@ body{
     color: white;
     border: none;
     border-radius: 15px;
+    box-shadow: 5px 5px 10px 5px #E57F4C;
+}
+.hang input[type='submit']:hover{
+    background: #BBBBBB;
+    box-shadow: 5px 5px 10px 5px aqua;
+}
+.xoa{
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 5px #E57F4C;
 }
