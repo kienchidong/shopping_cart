@@ -66,7 +66,11 @@
                     session_destroy();
                     break;
                 }
-
+            default:
+                {
+                    echo "giỏ hàng đang rỗng";
+                    break;
+                }
         }
     }
 
